@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    overflow-y: scroll;
+    padding: 1%;
+    position: relative;
+
+}
+.division{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.384);
+    height: 95vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.sub-division{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.division .icon img{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 30px;
+    width: 30px;
+}
+.imgcontent{
+    width: 90%;
+    height: 80%;
+}
+.imgcontent img{
+    width: 100%;
+    border-radius: 20px;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+.container{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+.one {
+    width: 20%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.one img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
+.one:hover{
+    width: 50%;
+
+}
+
+@media screen and (max-width:700px) {
+    .container{
+        gap: 5px;
+    }
+    .two{
+        display: none;
+    }
+    .one:hover{
+        width: 100%;
+    }
+}

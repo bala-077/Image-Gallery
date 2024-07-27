@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>Image Slider</h1>
+    <div class="division" id="division">
+        <div class="sub-division">
+            <div class="icon"><img src="./image/incorrect.png"  style="cursor: pointer;" onclick="closes()"></div>
+            <div class="imgcontent" id="imgContent">
+                <img src="" alt="IMAGE">
+            </div>
+        </div>
+    </div>
+    <div class="container" id="container">
+        <div class="one">
+            <img src="./image/img1.jpg" alt="IMAGE" onclick="showImage(event)">
+        </div>
+        <div class="one">
+            <img src="./image/img2.jpg" alt="IMAGE" onclick="showImage(event)">
+        </div>
+        <div class="one">
+            <img src="./image/img4.jpg" alt="IMAGE" onclick="showImage(event)">
+        </div>
+        <div class="one">
+            <img src="./image/img3.jpg" alt="IMAGE" onclick="showImage(event)">
+        </div>
+        <div class="one two">
+            <img src="./image/img6.jpg" alt="IMAGE" onclick="showImage(event)">
+        </div>
+        <div class="one two">
+            <img src="./image/img5.jpg" alt="IMAGE" onclick="showImage(event)">
+        </div>
+        <div class="one two three">
+            <img src="./image/img7.jpg" alt="IMAGE" onclick="showImage(event)">
+        </div>
+    </div>
+    <script>
+        var division = document.getElementById("division")
+
+        function showImage(event) {
+            var clickedImg = event.target;
+
+            var imgContent = document.getElementById("imgContent");
+            division.style.display = "block"
+            imgContent.querySelector("img").src = clickedImg.src;
+        }
+        function closes(){
+            division.style.display = "none"
+        }
+    </script>
+</body>
+
+</html>
